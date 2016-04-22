@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C959157C1CCACC23003B8FCE /* FlexibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C959157B1CCACC23003B8FCE /* FlexibilityViewController.swift */; };
+		C959157E1CCAD222003B8FCE /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C959157D1CCAD222003B8FCE /* Icon-Small.png */; };
 		C973D4F41C8F56B5007A7228 /* Endurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973D4F31C8F56B5007A7228 /* Endurance.swift */; };
 		C973D4F61C90AA52007A7228 /* Strength.swift in Sources */ = {isa = PBXBuildFile; fileRef = C973D4F51C90AA52007A7228 /* Strength.swift */; };
 		C973D4F81C90AA67007A7228 /* Flexibility .swift in Sources */ = {isa = PBXBuildFile; fileRef = C973D4F71C90AA67007A7228 /* Flexibility .swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		C959157B1CCACC23003B8FCE /* FlexibilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibilityViewController.swift; sourceTree = "<group>"; };
+		C959157D1CCAD222003B8FCE /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "../../../../Icon-Small.png"; sourceTree = "<group>"; };
 		C973D4F31C8F56B5007A7228 /* Endurance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endurance.swift; sourceTree = "<group>"; };
 		C973D4F51C90AA52007A7228 /* Strength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strength.swift; sourceTree = "<group>"; };
 		C973D4F71C90AA67007A7228 /* Flexibility .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Flexibility .swift"; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		C973D4FB1C90ACC7007A7228 /* EnduranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnduranceViewController.swift; sourceTree = "<group>"; };
 		C9790CCE1C922BBE00F71289 /* StrengthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrengthViewController.swift; sourceTree = "<group>"; };
 		C9790CD01C922D0F00F71289 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		C9790CDA1CC16CDD00F71289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		C9790CDA1CC16CDD00F71289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/rosiecrisman/Desktop/12th grade/Computer Science/My Workout/My Workout/../../../../../.Trash/Assets.xcassets"; sourceTree = "<absolute>"; };
 		C9E3AB9E1C500D510057EA5C /* My Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E3ABA11C500D510057EA5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E3ABA31C500D510057EA5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				C973D4F91C90AA73007A7228 /* Balance.swift */,
 				C9E3ABA51C500D510057EA5C /* Main.storyboard */,
 				C9790CDA1CC16CDD00F71289 /* Assets.xcassets */,
+				C959157D1CCAD222003B8FCE /* Icon-Small.png */,
 				C9E3ABAA1C500D520057EA5C /* LaunchScreen.storyboard */,
 				C9E3ABAD1C500D520057EA5C /* Info.plist */,
 			);
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C959157E1CCAD222003B8FCE /* Icon-Small.png in Resources */,
 				C9E3ABAC1C500D520057EA5C /* LaunchScreen.storyboard in Resources */,
 				C9790CDB1CC16CDD00F71289 /* Assets.xcassets in Resources */,
 				C9E3ABA71C500D510057EA5C /* Main.storyboard in Resources */,
@@ -435,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "My Workout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Castilleja.My-Workout";
@@ -446,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = "My Workout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Castilleja.My-Workout";
