@@ -10,4 +10,12 @@ import UIKit
 
 class FlexibilityViewController: UIViewController {
     
+    @IBOutlet weak var flexibilityInstructions: UITextView!
+    
+    @IBOutlet weak var flexibilityLabel: UILabel!
+    
+    @IBOutlet weak var flexibilitySegmentedControl: UISegmentedControl!
+    
+    @IBAction func flexibilityExercise(sender: UIButton) {
+    }
 }

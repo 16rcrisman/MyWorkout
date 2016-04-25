@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -62,7 +63,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="g8A-Tu-pit"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home-50.png" id="g8A-Tu-pit">
+                        <inset key="imageInsets" minX="-2" minY="5" maxX="6" maxY="1"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,7 +135,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Endurance" id="w10-09-aoL"/>
+                    <tabBarItem key="tabBarItem" title="Endurance" image="Running-50.png" id="w10-09-aoL">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="2" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="enduranceLabel" destination="Ueh-SQ-aL3" id="IvM-fW-izv"/>
                     </connections>
@@ -263,19 +269,19 @@
                                 <exclude reference="rMk-AH-2Uk"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="fgE-Em-GSV"/>
+                                <exclude reference="Tir-bV-OAW"/>
+                                <exclude reference="kD2-4j-uxa"/>
                                 <exclude reference="ZPZ-8v-UOM"/>
                                 <exclude reference="xdn-m6-wyK"/>
-                                <exclude reference="Pl1-Mh-7Y7"/>
-                                <exclude reference="ZM7-T6-TqI"/>
                                 <exclude reference="aKn-lV-aoz"/>
                                 <exclude reference="enb-k7-Vko"/>
                                 <exclude reference="zTm-1S-3mU"/>
                                 <exclude reference="0r2-ec-ee9"/>
                                 <exclude reference="IeA-EW-TSl"/>
                                 <exclude reference="kv6-bL-K0V"/>
-                                <exclude reference="Tir-bV-OAW"/>
-                                <exclude reference="kD2-4j-uxa"/>
-                                <exclude reference="fgE-Em-GSV"/>
+                                <exclude reference="Pl1-Mh-7Y7"/>
+                                <exclude reference="ZM7-T6-TqI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -287,23 +293,25 @@
                                 <include reference="rMk-AH-2Uk"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="fgE-Em-GSV"/>
+                                <include reference="Tir-bV-OAW"/>
+                                <include reference="kD2-4j-uxa"/>
                                 <include reference="ZPZ-8v-UOM"/>
                                 <include reference="xdn-m6-wyK"/>
-                                <include reference="Pl1-Mh-7Y7"/>
-                                <include reference="ZM7-T6-TqI"/>
                                 <include reference="aKn-lV-aoz"/>
                                 <include reference="enb-k7-Vko"/>
                                 <include reference="zTm-1S-3mU"/>
                                 <include reference="0r2-ec-ee9"/>
                                 <include reference="IeA-EW-TSl"/>
                                 <include reference="kv6-bL-K0V"/>
-                                <include reference="Tir-bV-OAW"/>
-                                <include reference="kD2-4j-uxa"/>
-                                <include reference="fgE-Em-GSV"/>
+                                <include reference="Pl1-Mh-7Y7"/>
+                                <include reference="ZM7-T6-TqI"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Strength" id="oMD-gq-Y1J"/>
+                    <tabBarItem key="tabBarItem" title="Strength" image="Bench Press-50.png" id="oMD-gq-Y1J">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="instructionText" destination="3DG-S4-xHk" id="8L5-3i-vxC"/>
                         <outlet property="rtsegmentedControl" destination="rMk-AH-2Uk" id="Jzb-Ge-9jK"/>
@@ -327,57 +335,137 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBy-f1-Bnq">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPu-M2-BTj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Generate Another Exercise"/>
+                                <connections>
+                                    <action selector="flexibilityExercise:" destination="zro-f0-eU2" eventType="touchUpInside" id="lCg-Qw-jsh"/>
+                                </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PFO-de-cot">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9gm-AB-Z43"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Upper Body"/>
+                                    <segment title="Lower Body"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9gm-AB-Z43"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="151" y="522" width="300" height="29"/>
+                                    <mask key="constraints">
+                                        <include reference="9gm-AB-Z43"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="flexibilitySegmentedControl:" destination="zro-f0-eU2" eventType="valueChanged" id="HyQ-AP-RI0"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upper Body or Lower Body Flexibilty?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBy-f1-Bnq">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5ac-Jg-w5r">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="vcH-Jm-q2j"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vcH-Jm-q2j"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="vcH-Jm-q2j"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5ac-Jg-w5r" firstAttribute="centerX" secondItem="oBy-f1-Bnq" secondAttribute="centerX" id="KcS-av-eJm"/>
+                            <constraint firstItem="GPu-M2-BTj" firstAttribute="top" secondItem="PFO-de-cot" secondAttribute="bottom" constant="72" id="SOj-Fr-E2W"/>
+                            <constraint firstItem="oBy-f1-Bnq" firstAttribute="centerX" secondItem="xV0-1d-BRK" secondAttribute="centerX" id="XSv-Rw-2qR"/>
                             <constraint firstItem="2EG-Ek-CxB" firstAttribute="top" secondItem="GPu-M2-BTj" secondAttribute="bottom" constant="119" id="aep-mq-wkP">
                                 <variation key="heightClass=regular" constant="88"/>
                             </constraint>
+                            <constraint firstItem="5ac-Jg-w5r" firstAttribute="top" secondItem="xV0-1d-BRK" secondAttribute="top" constant="278" id="ckj-Ps-A0m"/>
                             <constraint firstItem="oBy-f1-Bnq" firstAttribute="centerY" secondItem="xV0-1d-BRK" secondAttribute="centerY" id="dkI-63-2my">
-                                <variation key="heightClass=regular" constant="-184.5"/>
+                                <variation key="heightClass=regular" constant="-188.5"/>
                             </constraint>
                             <constraint firstItem="GPu-M2-BTj" firstAttribute="centerX" secondItem="xV0-1d-BRK" secondAttribute="centerX" id="gAn-ZW-tu7"/>
+                            <constraint firstItem="PFO-de-cot" firstAttribute="centerX" secondItem="GPu-M2-BTj" secondAttribute="centerX" id="gvM-1T-GEJ"/>
+                            <constraint firstItem="PFO-de-cot" firstAttribute="top" secondItem="5ac-Jg-w5r" secondAttribute="bottom" constant="69" id="oyh-sb-9KD"/>
                             <constraint firstItem="oBy-f1-Bnq" firstAttribute="centerX" secondItem="xV0-1d-BRK" secondAttribute="centerX" id="sHE-u9-BWP">
-                                <variation key="heightClass=regular" constant="-10.5"/>
+                                <variation key="heightClass=regular" constant="0.5"/>
                             </constraint>
+                            <constraint firstItem="5ac-Jg-w5r" firstAttribute="top" secondItem="oBy-f1-Bnq" secondAttribute="bottom" constant="46" id="wc4-or-iSl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="oBy-f1-Bnq"/>
                                 <exclude reference="GPu-M2-BTj"/>
+                                <exclude reference="PFO-de-cot"/>
+                                <exclude reference="oBy-f1-Bnq"/>
+                                <exclude reference="5ac-Jg-w5r"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="aep-mq-wkP"/>
+                                <exclude reference="SOj-Fr-E2W"/>
                                 <exclude reference="gAn-ZW-tu7"/>
+                                <exclude reference="XSv-Rw-2qR"/>
                                 <exclude reference="dkI-63-2my"/>
                                 <exclude reference="sHE-u9-BWP"/>
+                                <exclude reference="gvM-1T-GEJ"/>
+                                <exclude reference="oyh-sb-9KD"/>
+                                <exclude reference="KcS-av-eJm"/>
+                                <exclude reference="ckj-Ps-A0m"/>
+                                <exclude reference="wc4-or-iSl"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="oBy-f1-Bnq"/>
                                 <include reference="GPu-M2-BTj"/>
+                                <include reference="PFO-de-cot"/>
+                                <include reference="oBy-f1-Bnq"/>
+                                <include reference="5ac-Jg-w5r"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="aep-mq-wkP"/>
+                                <include reference="SOj-Fr-E2W"/>
                                 <include reference="gAn-ZW-tu7"/>
+                                <include reference="XSv-Rw-2qR"/>
                                 <include reference="dkI-63-2my"/>
                                 <include reference="sHE-u9-BWP"/>
+                                <include reference="gvM-1T-GEJ"/>
+                                <include reference="oyh-sb-9KD"/>
+                                <include reference="KcS-av-eJm"/>
+                                <include reference="ckj-Ps-A0m"/>
+                                <include reference="wc4-or-iSl"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Flexibility" id="vQz-2C-rtR"/>
+                    <tabBarItem key="tabBarItem" title="Flexibility" image="Gymnastics-50.png" id="vQz-2C-rtR">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="1" maxY="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="flexibilityInstructions" destination="5ac-Jg-w5r" id="Hsr-d1-kTx"/>
+                        <outlet property="flexibilityLabel" destination="oBy-f1-Bnq" id="Opn-GE-dF9"/>
+                        <outlet property="flexibilitySegmentedControl" destination="PFO-de-cot" id="hxA-8T-VQs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aba-ac-sqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -441,7 +529,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Balance" id="kZf-EI-k0I"/>
+                    <tabBarItem key="tabBarItem" title="Balance" image="Yoga-50.png" id="kZf-EI-k0I">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="-1" maxY="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yY-zf-4Gn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -469,4 +559,11 @@
             <point key="canvasLocation" x="-229" y="339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bench Press-50.png" width="50" height="50"/>
+        <image name="Gymnastics-50.png" width="50" height="50"/>
+        <image name="Home-50.png" width="50" height="50"/>
+        <image name="Running-50.png" width="50" height="50"/>
+        <image name="Yoga-50.png" width="50" height="50"/>
+    </resources>
 </document>
